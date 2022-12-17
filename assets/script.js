@@ -1,5 +1,4 @@
 currentDayEl = $("#currentDay");
-textAreasClass = $(".description");
 buttonEl = $(".btn");
 
 // handle displaying the time
@@ -9,8 +8,6 @@ function displayTime() {
 }
 
 setInterval(displayTime, 1000);
-
-console.log("#hour-11".childNodes);
 
 // A for loop to identify all of the rows in the html file
 
@@ -39,10 +36,22 @@ function saveToLocalStorage() {
   console.log(key);
   let value = $(this).siblings("textarea").val();
   console.log(value);
-  localStorage.setItem(key,value);
+  localStorage.setItem(key, value);
+}
+
+// for loop to take values from local storage and put them back in respective text
+// boxes, if for example the page is refreshed
+for (var i = 9; i < 18; i++) {
+  let storageValue = localStorage.getItem("hour-" + i);
+  console.log(storageValue);
+  $("#hour-" + i)
+    .children("textarea")
+    .val(storageValue);
 }
 
 // create event listener to save text area input into local storage when save
 // button on row is clicked
+
+/* $("#hour-10").children("textarea").val("scooby"); */
 
 buttonEl.on("click", saveToLocalStorage);
