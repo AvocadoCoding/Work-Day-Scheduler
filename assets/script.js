@@ -1,5 +1,6 @@
 currentDayEl = $('#currentDay');
-textAreasClass = $('.description')
+textAreasClass = $('.description');
+buttonEl = $('.btn');
 
 // handle displaying the time
 function displayTime() {
@@ -32,3 +33,11 @@ function displayTime() {
     }
 
   }
+
+
+
+  
+  // create event listener to save text area input into local storage when save 
+  // button on row is clicked
+
+  buttonEl.on('click', saveToLocalStorage);
