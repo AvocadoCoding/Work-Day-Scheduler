@@ -6,7 +6,8 @@ I have created a work day scheduling application using javascript, HTML and CSS 
 
 
 ## Screenshot of console outputs
-ApplicationScreenshot.PNG
+![image](https://user-images.githubusercontent.com/116954089/208269489-26f9efab-69e2-4a2a-83c0-871ca788e168.png)
+
 
 ## Deployed webpage location
 https://avocadocoding.github.io/Work-Day-Scheduler/
